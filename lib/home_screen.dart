@@ -122,7 +122,7 @@ class HomeScreen extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
                   Container(
-                    height: 280,
+                    height: 290,
                     width: MediaQuery.of(context).size.width / 2.1,
                     padding: const EdgeInsets.all(8),
                     decoration: BoxDecoration(
@@ -350,8 +350,9 @@ class HomeScreen extends StatelessWidget {
                       width: 5,
                     ),
                     Column(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        SizedBox(height: 10),
                         Text(
                           "5 coffee Beans For you\nMust Try!",
                           style: TextStyle(
@@ -360,6 +361,56 @@ class HomeScreen extends StatelessWidget {
                             fontWeight: FontWeight.w500,
                           ),
                         ),
+                        Text(
+                          "With Oat Milk",
+                          style: TextStyle(
+                            fontSize: 16,
+                            color: Colors.white38,
+                          ),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.symmetric(
+                            horizontal: 5,
+                          ),
+                          child: Row(
+                            children: [
+                              Text(
+                                "\$",
+                                style: TextStyle(
+                                  color: colors.pClr,
+                                  fontSize: 16,
+                                  fontWeight: FontWeight.bold,
+                                ),
+                              ),
+                              Text(
+                                "4.20",
+                                style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 16,
+                                  fontWeight: FontWeight.bold,
+                                ),
+                              ),
+                              SizedBox(width: 20),
+                              Container(
+                                height: 30,
+                                width: 30,
+                                decoration: BoxDecoration(
+                                  color: colors.pClr,
+                                  borderRadius: BorderRadius.circular(10),
+                                ),
+                                child: Center(
+                                  child: Text(
+                                    "+",
+                                    style: TextStyle(
+                                      fontSize: 25,
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                                  ),
+                                ),
+                              )
+                            ],
+                          ),
+                        )
                       ],
                     )
                   ],
@@ -367,6 +418,34 @@ class HomeScreen extends StatelessWidget {
               ),
             ],
           ),
+        ),
+      ),
+      bottomNavigationBar: Container(
+        height: 70,
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          children: [
+            Icon(
+              Icons.home,
+              color: colors.pClr,
+              size: 35,
+            ),
+            Icon(
+              Icons.shopping_bag,
+              color: colors.grayClr,
+              size: 35,
+            ),
+            Icon(
+              Icons.favorite,
+              color: colors.grayClr,
+              size: 35,
+            ),
+            Icon(
+              Icons.person,
+              color: colors.grayClr,
+              size: 35,
+            ),
+          ],
         ),
       ),
     );
