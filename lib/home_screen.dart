@@ -1,4 +1,5 @@
-import 'package:coffe_shop_app/colors.dart';
+import 'colors.dart';
+import 'package:coffe_shop_app/product_screen.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -132,14 +133,23 @@ class HomeScreen extends StatelessWidget {
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Container(
-                          // margin: const EdgeInsets.all(8),
-                          height: 180,
-                          child: ClipRRect(
-                            borderRadius: BorderRadius.circular(20),
-                            child: Image.asset(
-                              "images/coffee1.png",
-                              fit: BoxFit.cover,
+                        InkWell(
+                          onTap: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => ProductScreen(),
+                                ));
+                          },
+                          child: Container(
+                            // margin: const EdgeInsets.all(8),
+                            height: 180,
+                            child: ClipRRect(
+                              borderRadius: BorderRadius.circular(20),
+                              child: Image.asset(
+                                "images/coffee1.png",
+                                fit: BoxFit.cover,
+                              ),
                             ),
                           ),
                         ),
@@ -231,14 +241,23 @@ class HomeScreen extends StatelessWidget {
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Container(
-                          // margin: const EdgeInsets.all(8),
-                          height: 180,
-                          child: ClipRRect(
-                            borderRadius: BorderRadius.circular(20),
-                            child: Image.asset(
-                              "images/coffee2.jpg",
-                              fit: BoxFit.cover,
+                        InkWell(
+                          onTap: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => ProductScreen(),
+                                ));
+                          },
+                          child: Container(
+                            // margin: const EdgeInsets.all(8),
+                            height: 180,
+                            child: ClipRRect(
+                              borderRadius: BorderRadius.circular(20),
+                              child: Image.asset(
+                                "images/coffee2.jpg",
+                                fit: BoxFit.cover,
+                              ),
                             ),
                           ),
                         ),
